@@ -58,31 +58,33 @@ products.forEach((product) => {
 console.log(productsHTML);
 document.querySelector(".products-grid").innerHTML = productsHTML;
 
-
-
 const cart = [];
 document.querySelectorAll(".add-to-cart-button").forEach((button, index) => {
     button.addEventListener("click", () => {
         const product = products[index];
 
-        let cartItems = "";
-        cart.forEach((item) => {
-            if (productName === item.productName) {
-                cartItems = item;
-            }
-         if (cartItems) {
-            cartItems.quantity += 1;
-            return;
-         }
-        });
-
-        cart.push(
-            {
+        // Check if the product is already in the cart
+        let cartItem = cart.find(item => item.name === product.name);
+        if (cartItem) {
+            cartItem.quantity += 1;
+        } else {
+            cart.push({
                 name: product.name,
                 quantity: 1
-            }
-        );
-        console.log(cart);
+            });
+        }
+
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += item.quantity;
+    });
+    const cartQuantityElement = document.querySelector(".cart-quantity");
+    if (cartQuantityElement) {
+        cartQuantityElement.innerHTML = cartQuantity;
+    }
+
+        console.log(cartQuantity);
+        console.log(cart)
     });
 });
 
