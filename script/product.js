@@ -103,36 +103,5 @@ const products = [
       "sweaters",
       "apparel"
     ]
-  },
-  {
-    id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
-    image: "images/products/luxury-tower-set-6-piece.jpg",
-    name: "Luxury Towel Set - Graphite Gray",
-    rating: {
-      stars: 4.5,
-      count: 144
-    },
-    priceCents: 3599,
-    keywords: [
-      "bathroom",
-      "washroom",
-      "restroom",
-      "towels",
-      "bath towels"
-    ]
-  },
-  {
-    id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-    image: "images/products/liquid-laundry-detergent-plain.jpg",
-    name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
-    rating: {
-      stars: 4.5,
-      count: 305
-    },
-    priceCents: 2899,
-    keywords: [
-      "bathroom",
-      "cleaning"
-    ]
-  },
-]
+  }
+];
