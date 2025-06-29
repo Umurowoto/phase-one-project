@@ -88,7 +88,14 @@ document.querySelectorAll(".add-to-cart-button").forEach((button, index) => {
     });
 });
 
-
+function  removeFromCart(productName) {
+    const newCart =[];
+    if (!productName) {
+    newCart.push(cartItem)
+    }
+    
+    cart = newCart;
+}
 
 
 
